@@ -59,7 +59,7 @@ function createServer(cb) {
 }
 
 // hacky, but I need all things using 'net' to have the same listeners
-const net = global.nodeNetWeb || {
+const net = globalThis.nodeNetWeb || {
   Socket,
   createServer,
   events,
