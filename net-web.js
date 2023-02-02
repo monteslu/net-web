@@ -2,6 +2,8 @@ const EventEmitter = require('events').EventEmitter;
 
 const events = new EventEmitter();
 
+const servers = {};
+
 function Socket() {
   const socket = new EventEmitter();
   
@@ -34,7 +36,7 @@ function createServer(cb) {
   const server = new EventEmitter();
   server.listen = (port) => {
     console.log('server.listen', port);
-    listeners['l' + port] = server;
+    servers['l' + port] = server;
     events.on('socket_connect_' + port, ({ clientSocket, clientCallback }) => {
       console.log('socket_connect_' + port, clientSocket);
       const serverSocket = new EventEmitter();
@@ -64,6 +66,8 @@ const net = globalThis.nodeNetWeb || {
   createServer,
   events,
   EventEmitter,
+  servers,
 };
+globalThis.net = net;
 
 module.exports = net;
