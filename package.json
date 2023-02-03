@@ -1,8 +1,8 @@
 {
   "name": "net-web",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "a global(page) node net shim for the web",
-  "main": "dist/net-web.min.js",
+  "main": "net-web.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack && BUILD_MODE=production webpack"
