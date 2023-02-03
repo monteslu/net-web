@@ -1,4 +1,5 @@
 const EventEmitter = require('events').EventEmitter;
+const pack = require('./package.json');
 
 const events = new EventEmitter();
 
@@ -67,6 +68,7 @@ const net = globalThis.nodeNetWeb || {
   events,
   EventEmitter,
   servers,
+  version: pack.version,
 };
 globalThis.nodeNetWeb = net;
 
