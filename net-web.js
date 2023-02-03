@@ -68,6 +68,6 @@ const net = globalThis.nodeNetWeb || {
   EventEmitter,
   servers,
 };
-globalThis.net = net;
+globalThis.nodeNetWeb = net;
 
 module.exports = net;

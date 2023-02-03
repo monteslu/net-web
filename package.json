@@ -1,6 +1,6 @@
 {
   "name": "net-web",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "a global(page) node net shim for the web",
   "main": "dist/net-web.min.js",
   "scripts": {
